@@ -2,7 +2,10 @@
 `serverless deploy --stage production`
 
 # Test
-curl -G 'https://6h1g7m2au6.execute-api.us-east-2.amazonaws.com/dev/query' --data-urlencode 'query={classes(page: 1)}'
+curl -G 'https://xnoej0f15d.execute-api.us-east-2.amazonaws.com/dev/query' --data-urlencode 'query={classes(page: 1)}'
+curl -G 'https://xnoej0f15d.execute-api.us-east-2.amazonaws.com/dev/query' --data-urlencode "query={classes(first: 1, trimmedDurationFrom: 900, trimmedDurationTo: 1000, styles: [\"Ashtanga\", \"Vinyasa\"], levels: [1,2])}"
+
+curl -G 'https://xnoej0f15d.execute-api.us-east-2.amazonaws.com/dev/query' --data-urlencode "query={classes(durations: [{gte: 300, lte:1000}])}"
 
 # Tutorials
 ## Global Indexs
@@ -20,6 +23,12 @@ https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-examp
 
 ## Pagination
 https://graphql.org/learn/pagination/
+
+## Searching an index
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.Indexes.QueryAndScan.html#SQLtoNoSQL.Indexes.QueryAndScan.DynamoDB
+
+# GrapQL api example braintree
+https://graphql.braintreepayments.com/guides/making_api_calls/#endpoints
 
 
 # Example response graphQL
